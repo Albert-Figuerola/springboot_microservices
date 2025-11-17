@@ -24,7 +24,7 @@ public class ProductController {
     }
 
     @GetMapping("products/{id}")
-    public ResponseEntity<?> detail(
+    public ResponseEntity<?> findById(
             @PathVariable Long id
     ) {
         Optional<Product> product = this.service.findById(id);
