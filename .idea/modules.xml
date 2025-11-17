@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/SpringCloud.iml" filepath="$PROJECT_DIR$/.idea/SpringCloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msvc-items/msvc-items.iml" filepath="$PROJECT_DIR$/msvc-items/msvc-items.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msvc-products/msvc-products.iml" filepath="$PROJECT_DIR$/msvc-products/msvc-products.iml" />
     </modules>
   </component>
 </project>
