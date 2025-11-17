@@ -1,5 +1,6 @@
 package org.springcloud.msvc.items.services;
 
+import feign.FeignException;
 import org.springcloud.msvc.items.clients.ProductFeignClient;
 import org.springcloud.msvc.items.models.Item;
 import org.springcloud.msvc.items.models.Product;
@@ -29,12 +30,12 @@ public class ItemServiceFeign implements ItemService {
 
     @Override
     public Optional<Item> findById(Long id) {
-        Product product = client.findById(id);
+        try {
+            Product product = client.findById(id);
 
-        if (product == null) {
+            return Optional.of(new Item(product, random.nextInt(10) + 1));
+        } catch (FeignException e) {
             return Optional.empty();
-        } else {
-            return Optional.ofNullable(new Item(client.findById(id), random.nextInt(10) + 1));
         }
     }
 
