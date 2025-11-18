@@ -14,6 +14,16 @@ public class Product {
 
     private LocalDate updatedAt;
 
+    private int port;
+
+    public int getPort() {
+        return port;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
+    }
+
     public Long getId() {
         return id;
     }
